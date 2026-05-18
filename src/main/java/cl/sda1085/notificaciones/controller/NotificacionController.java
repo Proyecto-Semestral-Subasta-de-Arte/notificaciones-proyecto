@@ -104,6 +104,7 @@ public class NotificacionController {
                 .orElse(ResponseEntity.noContent().build());
     }
 
+    //Marcar notificación como leída
     @PatchMapping("/{id}/leer")
     public ResponseEntity<NotificacionResponseDTO> marcarComoLeida(@PathVariable Long id) {
         return notificacionService.marcarComoLeida(id)
